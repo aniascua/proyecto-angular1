@@ -1,3 +1,4 @@
+![proyecto angular foto](https://user-images.githubusercontent.com/83845164/227754605-ecf69b2f-7c1d-4955-8b48-662706f25983.PNG)
 # Proyectoangular1
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
