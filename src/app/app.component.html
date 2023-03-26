@@ -1,0 +1,79 @@
+<nav class="navbar navbar-dark bg-primary">
+  <a class="navbar-brand ml-3" href="/"> ANGULAR SIMPLE CRUD </a>
+</nav>
+
+<link rel="stylesheet" href="">
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 mt-4">
+      <!-- Agregar casilla de texto explicativa -->
+      <div class="alert alert-info">
+        <p>Un CRUD es una operación básica de base de datos que significa "Create, Read, Update, Delete". Es un conjunto de acciones que permite crear, leer, actualizar y eliminar registros en una base de datos.</p>
+      </div>
+      <!-- Fin de la casilla de texto explicativa -->
+      <ul class="list-group">
+        <li
+          *ngFor="let Employee of employeeArray"
+          class="list-group-item list-group-item-action"
+          (click)="openForEdit(Employee)"
+          [class.active]="Employee == selectedEmployee">
+          <span class="badge badge-primary badge-success">{{Employee.id}} - {{ Employee.country }} </span> {{ Employee.name }}
+        </li>
+      </ul>
+      <div class="card mt-4">
+        <div class="card-body">
+          <div class="card-title">Inserte un nuevo empleado</div>
+          <div class="form-group">
+            <input type="text" [(ngModel)]="selectedEmployee.name" placeholder="Ingrese el nombre" class="form-control">
+            <input type="text" [(ngModel)]="selectedEmployee.country" placeholder="Ingrese el país" class="form-control">
+          </div>
+          <button (click)="addOrEdit()" class="btn btn-primary">
+            Submit
+          </button>
+          <button
+          *ngIf="selectedEmployee.id !== 0"
+          class="btn btn-danger"
+          (click)="delete()"
+          >
+          Delete
+          </button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-md-4">
+      <img
+        width="350"
+        alt="Angular Logo"
+        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
+      />
+    </div>
+  </div>
+</div>
+
+
+
+
+<style>
+  :host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .navbar-brand {
+    margin-left: 30px;
+  }
+
+  img {
+    margin-top: 60px;
+  }
+</style>
