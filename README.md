@@ -1,4 +1,10 @@
-![proyecto angular foto](https://user-images.githubusercontent.com/83845164/227754605-ecf69b2f-7c1d-4955-8b48-662706f25983.PNG)
+### Link para probar el CRUD: 
+
+ https://angularcrud01.000webhostapp.com/
+
+![1](https://user-images.githubusercontent.com/83845164/229307128-4a19bac2-cd78-4e97-b2cf-589823269fc6.PNG)
+
+
 
 Esta aplicación de Angular es un ejemplo básico de una operación CRUD (Create, Read, Update, Delete) que utiliza una lista de empleados para demostrar cómo interactuar con una base de datos.
 
